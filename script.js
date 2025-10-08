@@ -43,7 +43,7 @@ hamburger.addEventListener("click", () => {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent form from submitting normally
 
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+  emailjs.sendForm('service_a1o5h9b', 'template_xdbptkb', this)
     .then(function() {
       alert('Message sent successfully! 🎉');
       document.getElementById('contact-form').reset(); // clear form
