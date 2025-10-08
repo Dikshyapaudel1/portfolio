@@ -40,3 +40,14 @@ hamburger.addEventListener("click", () => {
     document.getElementById("projectModal").style.display = "none";
   }
 
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form from submitting normally
+
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+    .then(function() {
+      alert('Message sent successfully! 🎉');
+      document.getElementById('contact-form').reset(); // clear form
+    }, function(error) {
+      alert('Oops! Something went wrong...', error);
+    });
+});
